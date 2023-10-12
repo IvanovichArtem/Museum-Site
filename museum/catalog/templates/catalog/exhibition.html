@@ -1,0 +1,43 @@
+{% extends "catalog/base.html" %}
+{% load static %}
+
+{% block title %}
+<title>{{ title }}</title>
+{% endblock title %}
+
+
+{% block text %}
+<div class="row justify-content-center">
+    <h1>{{ title }}</h1>
+        {% for exhibit in exhibitions %}
+        <div class="col-lg-5 col-md-6 mb-4">
+            <div class="card h-100">
+                    <img class="card-img-top"
+                        src={{exhibit.img.url}}
+                        alt="">
+                <div class="card-body">
+                    <h4 class="card-title">
+                        <p>{{exhibit.name}}</p> <p>{{exhibit.age_limit}}+</p>
+                    </h4>
+                    <h5> 
+                        {% if exhibit.price == 0 %}
+                            Бесплатно!!!
+                        {% else %}
+                            {{exhibit.price }} руб.
+                        {% endif %}
+                    </h5>
+                    <p class="card-text">{{exhibit.description}}</p>
+                </div>
+                <div class="card-footer text-center">
+                    <a class="btn btn-outline-success"
+                    href={% url "catalog:basket_add" exhibit.id %}>
+                        Купить билет
+                    </a>
+                </div>
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+
+{% endblock text %}
+

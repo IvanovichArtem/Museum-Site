@@ -1,0 +1,473 @@
+[
+    {
+        "model": "auth.permission",
+        "pk": 1,
+        "fields": {
+            "name": "Can add log entry",
+            "content_type": 1,
+            "codename": "add_logentry"
+        }
+    },
+    {
+        "model": "auth.permission",
+        "pk": 2,
+        "fields": {
+            "name": "Can change log entry",
+            "content_type": 1,
+            "codename": "change_logentry"
+        }
+    },
+    {
+        "model": "auth.permission",
+        "pk": 3,
+        "fields": {
+            "name": "Can delete log entry",
+            "content_type": 1,
+            "codename": "delete_logentry"
+        }
+    },
+    {
+        "model": "auth.permission",
+        "pk": 4,
+        "fields": {
+            "name": "Can view log entry",
+            "content_type": 1,
+            "codename": "view_logentry"
+        }
+    },
+    {
+        "model": "auth.permission",
+        "pk": 5,
+        "fields": {
+            "name": "Can add permission",
+            "content_type": 2,
+            "codename": "add_permission"
+        }
+    },
+    {
+        "model": "auth.permission",
+        "pk": 6,
+        "fields": {
+            "name": "Can change permission",
+            "content_type": 2,
+            "codename": "change_permission"
+        }
+    },
+    {
+        "model": "auth.permission",
+        "pk": 7,
+        "fields": {
+            "name": "Can delete permission",
+            "content_type": 2,
+            "codename": "delete_permission"
+        }
+    },
+    {
+        "model": "auth.permission",
+        "pk": 8,
+        "fields": {
+            "name": "Can view permission",
+            "content_type": 2,
+            "codename": "view_permission"
+        }
+    },
+    {
+        "model": "auth.permission",
+        "pk": 9,
+        "fields": {
+            "name": "Can add group",
+            "content_type": 3,
+            "codename": "add_group"
+        }
+    },
+    {
+        "model": "auth.permission",
+        "pk": 10,
+        "fields": {
+            "name": "Can change group",
+            "content_type": 3,
+            "codename": "change_group"
+        }
+    },
+    {
+        "model": "auth.permission",
+        "pk": 11,
+        "fields": {
+            "name": "Can delete group",
+            "content_type": 3,
+            "codename": "delete_group"
+        }
+    },
+    {
+        "model": "auth.permission",
+        "pk": 12,
+        "fields": {
+            "name": "Can view group",
+            "content_type": 3,
+            "codename": "view_group"
+        }
+    },
+    {
+        "model": "auth.permission",
+        "pk": 13,
+        "fields": {
+            "name": "Can add content type",
+            "content_type": 4,
+            "codename": "add_contenttype"
+        }
+    },
+    {
+        "model": "auth.permission",
+        "pk": 14,
+        "fields": {
+            "name": "Can change content type",
+            "content_type": 4,
+            "codename": "change_contenttype"
+        }
+    },
+    {
+        "model": "auth.permission",
+        "pk": 15,
+        "fields": {
+            "name": "Can delete content type",
+            "content_type": 4,
+            "codename": "delete_contenttype"
+        }
+    },
+    {
+        "model": "auth.permission",
+        "pk": 16,
+        "fields": {
+            "name": "Can view content type",
+            "content_type": 4,
+            "codename": "view_contenttype"
+        }
+    },
+    {
+        "model": "auth.permission",
+        "pk": 17,
+        "fields": {
+            "name": "Can add session",
+            "content_type": 5,
+            "codename": "add_session"
+        }
+    },
+    {
+        "model": "auth.permission",
+        "pk": 18,
+        "fields": {
+            "name": "Can change session",
+            "content_type": 5,
+            "codename": "change_session"
+        }
+    },
+    {
+        "model": "auth.permission",
+        "pk": 19,
+        "fields": {
+            "name": "Can delete session",
+            "content_type": 5,
+            "codename": "delete_session"
+        }
+    },
+    {
+        "model": "auth.permission",
+        "pk": 20,
+        "fields": {
+            "name": "Can view session",
+            "content_type": 5,
+            "codename": "view_session"
+        }
+    },
+    {
+        "model": "auth.permission",
+        "pk": 21,
+        "fields": {
+            "name": "Can add exhibition type",
+            "content_type": 6,
+            "codename": "add_exhibitiontype"
+        }
+    },
+    {
+        "model": "auth.permission",
+        "pk": 22,
+        "fields": {
+            "name": "Can change exhibition type",
+            "content_type": 6,
+            "codename": "change_exhibitiontype"
+        }
+    },
+    {
+        "model": "auth.permission",
+        "pk": 23,
+        "fields": {
+            "name": "Can delete exhibition type",
+            "content_type": 6,
+            "codename": "delete_exhibitiontype"
+        }
+    },
+    {
+        "model": "auth.permission",
+        "pk": 24,
+        "fields": {
+            "name": "Can view exhibition type",
+            "content_type": 6,
+            "codename": "view_exhibitiontype"
+        }
+    },
+    {
+        "model": "auth.permission",
+        "pk": 25,
+        "fields": {
+            "name": "Can add exhibition",
+            "content_type": 7,
+            "codename": "add_exhibition"
+        }
+    },
+    {
+        "model": "auth.permission",
+        "pk": 26,
+        "fields": {
+            "name": "Can change exhibition",
+            "content_type": 7,
+            "codename": "change_exhibition"
+        }
+    },
+    {
+        "model": "auth.permission",
+        "pk": 27,
+        "fields": {
+            "name": "Can delete exhibition",
+            "content_type": 7,
+            "codename": "delete_exhibition"
+        }
+    },
+    {
+        "model": "auth.permission",
+        "pk": 28,
+        "fields": {
+            "name": "Can view exhibition",
+            "content_type": 7,
+            "codename": "view_exhibition"
+        }
+    },
+    {
+        "model": "auth.permission",
+        "pk": 29,
+        "fields": {
+            "name": "Can add user",
+            "content_type": 8,
+            "codename": "add_user"
+        }
+    },
+    {
+        "model": "auth.permission",
+        "pk": 30,
+        "fields": {
+            "name": "Can change user",
+            "content_type": 8,
+            "codename": "change_user"
+        }
+    },
+    {
+        "model": "auth.permission",
+        "pk": 31,
+        "fields": {
+            "name": "Can delete user",
+            "content_type": 8,
+            "codename": "delete_user"
+        }
+    },
+    {
+        "model": "auth.permission",
+        "pk": 32,
+        "fields": {
+            "name": "Can view user",
+            "content_type": 8,
+            "codename": "view_user"
+        }
+    },
+    {
+        "model": "contenttypes.contenttype",
+        "pk": 1,
+        "fields": {
+            "app_label": "admin",
+            "model": "logentry"
+        }
+    },
+    {
+        "model": "contenttypes.contenttype",
+        "pk": 2,
+        "fields": {
+            "app_label": "auth",
+            "model": "permission"
+        }
+    },
+    {
+        "model": "contenttypes.contenttype",
+        "pk": 3,
+        "fields": {
+            "app_label": "auth",
+            "model": "group"
+        }
+    },
+    {
+        "model": "contenttypes.contenttype",
+        "pk": 4,
+        "fields": {
+            "app_label": "contenttypes",
+            "model": "contenttype"
+        }
+    },
+    {
+        "model": "contenttypes.contenttype",
+        "pk": 5,
+        "fields": {
+            "app_label": "sessions",
+            "model": "session"
+        }
+    },
+    {
+        "model": "contenttypes.contenttype",
+        "pk": 6,
+        "fields": {
+            "app_label": "catalog",
+            "model": "exhibitiontype"
+        }
+    },
+    {
+        "model": "contenttypes.contenttype",
+        "pk": 7,
+        "fields": {
+            "app_label": "catalog",
+            "model": "exhibition"
+        }
+    },
+    {
+        "model": "contenttypes.contenttype",
+        "pk": 8,
+        "fields": {
+            "app_label": "user",
+            "model": "user"
+        }
+    },
+    {
+        "model": "catalog.exhibitiontype",
+        "pk": 1,
+        "fields": {
+            "name": "Выставка"
+        }
+    },
+    {
+        "model": "catalog.exhibitiontype",
+        "pk": 2,
+        "fields": {
+            "name": "Событие"
+        }
+    },
+    {
+        "model": "catalog.exhibition",
+        "pk": 1,
+        "fields": {
+            "name": "Выставка современного искусства",
+            "description": "Эта выставка представляет собой сборник работ современных художников со всего мира. Здесь вы найдете разнообразие стилей, техник и идей, отражающих современные тенденции в искусстве.",
+            "age_limit": 12,
+            "place": "Музей",
+            "price": "29.99",
+            "start_date": "2023-11-01",
+            "end_date": "2023-11-30",
+            "img": "exhibition_images/Выставка_современного_исскуства_G8a4390.jpg",
+            "type": 1
+        }
+    },
+    {
+        "model": "catalog.exhibition",
+        "pk": 2,
+        "fields": {
+            "name": "Выставка древних артефактов",
+            "description": "Эта выставка приглашает вас в путешествие во времени, показывая древние артефакты из различных культур и цивилизаций. Ознакомьтесь с удивительными предметами, расскажите их истории.",
+            "age_limit": 8,
+            "place": "Музей",
+            "price": "49.99",
+            "start_date": "2023-10-15",
+            "end_date": "2023-12-15",
+            "img": "exhibition_images/Выставка_древних_артефактов.jpg",
+            "type": 1
+        }
+    },
+    {
+        "model": "catalog.exhibition",
+        "pk": 3,
+        "fields": {
+            "name": "Фестиваль культурного многообразия",
+            "description": "Этот фестиваль празднует разнообразие культур и традиций со всего света. Гости смогут попробовать разнообразные блюда, насладиться музыкой и танцами, а также посетить мастер-классы и выставки.",
+            "age_limit": 14,
+            "place": "Музей",
+            "price": "34.99",
+            "start_date": "2023-09-15",
+            "end_date": "2023-09-17",
+            "img": "exhibition_images/Фестиваль_культурного_многообразия.jpg",
+            "type": 2
+        }
+    },
+    {
+        "model": "catalog.exhibition",
+        "pk": 4,
+        "fields": {
+            "name": "Выставка новых технологий и инноваций",
+            "description": "Это событие представит последние достижения в сфере технологий, включая искусственный интеллект, блокчейн, разработки в области зеленых технологий и многое другое. Участники смогут познакомиться с инновациями будущего.",
+            "age_limit": 12,
+            "place": "Музей",
+            "price": "24.99",
+            "start_date": "2023-11-05",
+            "end_date": "2023-11-07",
+            "img": "exhibition_images/Выставка_новых_технологий_и_инноваций.jpg",
+            "type": 1
+        }
+    },
+    {
+        "model": "catalog.exhibition",
+        "pk": 5,
+        "fields": {
+            "name": "Город и документальная фотография",
+            "description": "На дискуссии Анна Зайцева, главный куратор и заместитель директора Мультимедиа Арт Музея, обсудит с современными художниками-документалистами их методы исследования городской среды, которые отражаются в «почерке» каждого автора и делают его взгляд на город особенным.",
+            "age_limit": 12,
+            "place": "Музей",
+            "price": "0.00",
+            "start_date": "2023-11-08",
+            "end_date": "2023-11-30",
+            "img": "exhibition_images/Город_и_документальная_фотография.jpg",
+            "type": 2
+        }
+    },
+    {
+        "model": "catalog.exhibition",
+        "pk": 6,
+        "fields": {
+            "name": "Искусство вечности: Путешествие сквозь эпохи",
+            "description": "Музей представляет уникальное событие, которое открывает двери в мир истории и культуры. \"Искусство вечности: Путешествие сквозь эпохи\" - это эксклюзивное событие, которое позволит посетителям пройтись по временной линии и погрузиться в различные эпохи искусства.",
+            "age_limit": 16,
+            "place": "Музей",
+            "price": "15.99",
+            "start_date": "2023-10-07",
+            "end_date": "2023-11-15",
+            "img": "exhibition_images/Искусство_вечности_-__Путешествие_сквозь_эпохи.jpg",
+            "type": 2
+        }
+    },
+    {
+        "model": "catalog.exhibition",
+        "pk": 7,
+        "fields": {
+            "name": "Современные Художники: Взгляд в будущее",
+            "description": "Эта выставка представляет работы современных художников, чьи произведения воплощают в себе новаторские идеи и тенденции искусства. Посетители смогут оценить современные мастерские приемы и подойти к искусству с новой перспективы.",
+            "age_limit": 18,
+            "place": "Музей",
+            "price": "20.00",
+            "start_date": "2023-10-20",
+            "end_date": "2023-12-10",
+            "img": "exhibition_images/Современные_Художники_-_Взгляд_в_будущее.jpg",
+            "type": 1
+        }
+    }
+]
