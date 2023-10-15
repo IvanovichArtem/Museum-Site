@@ -1,0 +1,8 @@
+asgiref
+Django
+Pillow
+psycopg2
+pytz
+setuptools
+sqlparse
+tzdata
