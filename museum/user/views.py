@@ -4,9 +4,11 @@ from user.forms import UserLoginForm, UserRegistrationForm, UserProfileForm
 from django.contrib import auth
 from django.urls import reverse, reverse_lazy
 from catalog.models import Basket
-from django.contrib.auth.decorators import login_required
 from django.views.generic.edit import CreateView, UpdateView
-from user.models import User
+from django.views.generic import TemplateView
+from user.models import User, EmailVerification
+from django.contrib.messages.views import SuccessMessageMixin
+from common.views import TitleMixin
 
 
 def login(request):
@@ -28,27 +30,12 @@ def login(request):
     return render(request, "user/login.html", context)
 
 
-class UserRegistrationView(CreateView):
+class UserRegistrationView(SuccessMessageMixin, CreateView):
     model = User
     form_class = UserRegistrationForm
     template_name = "user/registration.html"
     success_url = reverse_lazy("user:login")
-
-
-# def registration(request):
-#     if request.method == "POST":
-#         form = UserRegistrationForm(data=request.POST)
-#         if form.is_valid():
-#             form.save()
-#             messages.success(request, "Вы успешно зарегестрировались.")
-#             return HttpResponseRedirect(reverse("user:login"))
-#         else:
-#             print("form is not valid")
-#     else:
-#         form = UserRegistrationForm()
-
-#     context = {"form": form}
-#     return render(request, "user/registration.html", context)
+    success_message = "Вы успешно зарегестрированы"
 
 
 def logout(request):
@@ -56,38 +43,36 @@ def logout(request):
     return HttpResponseRedirect(reverse("catalog:home"))
 
 
-class UserProfileView(UpdateView):
+class UserProfileView(TitleMixin, SuccessMessageMixin, UpdateView):
     model = User
     form_class = UserProfileForm
     template_name = "user/profile.html"
+    success_message = "Информация изменена!"
+    title = "Личный кабинет"
 
     def get_success_url(self) -> str:
         return reverse_lazy("user:profile", args=(self.object.id,))
 
     def get_context_data(self, **kwargs: Any) -> dict[str, Any]:
         context = super().get_context_data(**kwargs)
-        context["title"] = "Личный кабинет"
         context["baskets"] = Basket.objects.filter(user=self.request.user)
         return context
 
 
-# @login_required
-# def profile(request):
-#     if request.method == "POST":
-#         form = UserProfileForm(
-#             instance=request.user, data=request.POST, files=request.FILES
-#         )
-#         if form.is_valid():
-#             form.save()
-#             return HttpResponseRedirect(reverse("user:profile"))
-#         else:
-#             print("Form is not valid", form.errors)
-#     else:
-#         form = UserProfileForm(instance=request.user)
+class EmailVerificationView(TitleMixin, TemplateView):
+    title = "Подтверждение электронной почты"
+    template_name = "user/email_verification.html"
 
-#     context = {
-#         "title": "Профиль",
-#         "form": form,
-#         "baskets": Basket.objects.filter(user=request.user),
-#     }
-#     return render(request, "user/profile.html", context)
+    def get(self, request, *args, **kwargs):
+        code = kwargs["code"]
+        user = User.objects.get(email=kwargs["email"])
+        email_verifications = EmailVerification.objects.filter(user=user, code=code)
+        if (
+            email_verifications.exists()
+            and not email_verifications.first().is_expired()
+        ):
+            user.is_verified_email = True
+            user.save()
+            return super(EmailVerificationView, self).get(request, *args, **kwargs)
+        else:
+            return HttpResponseRedirect(reverse("catalog:home"))
